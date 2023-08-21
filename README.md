@@ -1,6 +1,6 @@
 # SMLEE 프로젝트
 
-## utorial
+## 웹사이트연동
 - 연동링크: https://github.com/daanfa
 - 다안파더 https://mokguy.wixsite.com/idealtree/forum
 
