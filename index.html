@@ -33,7 +33,7 @@
             }
         };
 
-        readTextFile("content/GitUsage.md");
+        readTextFile("GitUsage.md");
         let html = converter.makeHtml(markdownFormat);
         wrapper.innerHTML = html;
         function readTextFile(file) {
