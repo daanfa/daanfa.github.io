@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="background: seashell;>
   <h1> LEE SAGNMOK (이상목) - Daanfa </h1>
   <head profile="https://daanfa.github.io/GitUsage.md"></head>
   <a href="https://mokguy.wixsite.com/idealtree/forum" target="_blank">https://mokguy.wixsite.com/idealtree/forum</a>
@@ -11,5 +11,61 @@
 <h2>Relative URLs</h2>
 <p><a href="">aaaa</a></p>
 <p><a href="">bbbb</a></p>
-     
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/showdown.min.js"></script>
+    <style>
+        #wrapper{
+            padding-right:15%;
+            padding-left:15%;
+        }
+
+        #wrapper.mobile {
+            padding-right : 15px;
+            padding-left : 15px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper"></div>
+<script>
+    (function () {
+        var wrapper = document.getElementById("wrapper");
+        var converter = new showdown.Converter();
+        var markdownFormat = "There is no markdown file";
+
+        window.onresize = function () {
+            if(window.innerWidth < 600){
+                wrapper.setAttribute("class", "mobile");
+            }else{
+                wrapper.removeAttribute("class");
+            }
+        };
+
+        readTextFile("content/content.md");
+        let html = converter.makeHtml(markdownFormat);
+        wrapper.innerHTML = html;
+        function readTextFile(file) {
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = function () {
+                if (rawFile.readyState === 4) {
+                    if (rawFile.status === 200 || rawFile.status == 0) {
+                        markdownFormat = rawFile.responseText;
+                    }
+                }
+            };
+            rawFile.send(null);
+        }
+    })();
+</script>
+</body>
+  
 </html>
+
+
+
+
