@@ -27,7 +27,7 @@
 
 
 
-### RLHF 데이터셋 생성
+### 생성
 
 <details>
   <summary> 1.2)  </summary>
@@ -58,11 +58,11 @@
 ```
 [
     {
-        "prompt": ?",
-        "completion_0": " ",
-        "completion_1": "",
-        "completion_2": " \" \\"",
-        "ranking": [
+        "p": ?",
+        "p": " ",
+        "p": "",
+        "p": " \" \\"",
+        "p": [
             1,
             0,
             2
